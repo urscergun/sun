@@ -51,12 +51,3 @@ func FetchSunTimes(date string, latitude string, longitude string) (*SunTimesDat
 
 	return &sunTimes.Results, nil
 }
-
-func main() {
-	sunTimes, err := FetchSunTimes("2025-01-31", "45.763935", "21.2238336")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-	fmt.Printf("Sunrise: %s, Sunset: %s\n", sunTimes.Sunrise, sunTimes.Sunset)
-}
